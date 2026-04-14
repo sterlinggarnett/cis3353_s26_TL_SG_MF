@@ -24,6 +24,8 @@
   - [Known Issues & Limitations](#known-issues--limitations)
 
 ## Overview
+**Suburban-SOC:** Mesh-based wireless network for suburban neighborhoods with centralized SOC management. Replaces insecure home networks with a unified system that captures and analyzes traffic for threats, delivering enterprise-grade security and simple, plug-and-play connectivity for homeowners.
+
 The "Suburban-SOC Network Pipeline" is a software project developed by Tommy Lammers, Sterling Garnett, and Maria Frausto for the Computer Systems Security course.
 
 **Objective:**
