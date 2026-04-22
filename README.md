@@ -53,6 +53,9 @@ This project encompasses the design, development, and testing of an advanced **n
 ### Systems & Applications Targeted for Scanning:
 * The tool is engineered to analyze and identify anomalies in **network traffic**. This includes dynamic routing, wireless access points, and devices on the OpenWrt router network.
 
+### Baseline Traffic Monitoring Scope (Boundary Rules):
+* To ensure system efficiency and targeted threat detection, the pipeline is configured to capture **only boundary HTTP traffic** entering and exiting the main router. This rule avoids processing internal network noise (e.g., local LAN file-sharing) and bypasses encrypted traffic that cannot be deeply inspected without a decryption proxy.
+
 ### Core Components & Functionalities of the Developed Tool:
 * **Zeek Processing Engine:** Parses raw network packets into categorized JSON logs.
 * **Logstash & Filebeat Forwarders:** Aggregates, filters, and forwards logs robustly.
