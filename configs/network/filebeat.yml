@@ -1,0 +1,22 @@
+# ============================== Filebeat inputs ===============================
+filebeat.inputs:
+
+- type: filestream
+  id: my-zeek-logs
+  enabled: true
+  # Keeping your original chosen path for the logs
+  paths:
+    - /storage/PCAP/zeek_logs/*.log
+
+  # Automatically parse the JSON Zeek logs
+  parsers:
+    - ndjson:
+        target: ""
+        add_error_key: true
+        message_key: "ts"
+
+# ============================== Logstash Output ===============================
+output.logstash:
+  # Using an environment variable so teams can change IPs without editing this file.
+  # The syntax below means: "Use the value of LOGSTASH_HOST, but if it's missing, default to localhost:5044"
+  hosts: ["${LOGSTASH_HOST:localhost:5044}"]
