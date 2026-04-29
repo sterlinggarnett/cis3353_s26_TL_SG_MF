@@ -15,7 +15,12 @@ The primary goal of these scripts is to capture network traffic from remote rout
 
 ## Script Overviews
 
-All main administrative scripts are currently located in the `setup/` subdirectory.
+All main administrative scripts are currently located in the `setup/` subdirectory. However, for local developer environment setup, use the ones located in the root of `scripts/`.
+
+### Developer Onboarding
+
+* **`onboard_dev.ps1`** (Windows) / **`onboard_dev.sh`** (Linux/WSL): 
+  Run this script to automatically check your local environment for necessary development dependencies (e.g., Git, GitHub CLI, Docker, OpenSSH, WSL). Ensures you are ready to use the data streaming tools and Agile GitHub scripts.
 
 ### Setup and Configuration
 
