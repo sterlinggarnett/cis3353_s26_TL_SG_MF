@@ -1,6 +1,9 @@
 # Suburban-SOC Network Pipeline
 
 ## Table of Contents
+- [Team Members](#team-members)
+- [Course Modules](#course-modules)
+- [Project Status](#project-status)
 - [Overview](#overview)
 - [Scope: Suburban-SOC Network Pipeline](#scope-suburban-soc-network-pipeline)
   - [Systems & Applications Targeted for Scanning](#systems--applications-targeted-for-scanning)
@@ -22,6 +25,37 @@
   - [Project-Specific Considerations](#project-specific-considerations)
   - [Future Enhancements](#future-enhancements)
   - [Known Issues & Limitations](#known-issues--limitations)
+
+## Team Members
+
+| Name | GitHub Username | Role |
+|---|---|---|
+| Tommy Lammers | [@voltron-1](https://github.com/voltron-1) | Security Analyst / Manager |
+| Sterling Garnett | [@sterlinggarnett](https://github.com/sterlinggarnett) | System Architect / Engineer / Project Lead |
+| Maria Frausto | [@megifrausto](https://github.com/megifrausto) | Design / Docs Lead / Manager |
+
+## Course Modules
+
+This project directly covers the following course modules from CIS 3353 — Computer Systems Security:
+
+| Module | Topic | Connection to Pipeline |
+|---|---|---|
+| **Module 2** | Network Fundamentals & Traffic Analysis | The core pipeline captures and analyzes raw boundary network traffic from our OpenWrt mesh router, applying the principles of packet inspection, protocol dissection, and traffic scoping covered in this module. |
+| **Module 8** | Intrusion Detection Systems (IDS) | Zeek functions as our IDS engine, parsing PCAP captures into structured JSON logs and generating `notice.log` alerts for port scans, brute-force attempts, and anomalous file transfers — directly applying the detection methodology from this module. |
+| **Module 9** | Security Operations & Incident Response | The ELK stack (Elasticsearch, Logstash, Kibana) forms our SOC dashboard layer, enabling log correlation, GeoIP enrichment, and real-time visualization of security events. Milestone 8 validates the full incident response lifecycle with simulated attack scenarios. |
+
+## Project Status
+
+| Milestone | Title | Status |
+|---|---|---|
+| M1 | Topology | ✅ Complete |
+| M2 | Data Acquisition (Mesh Capture) | ✅ Complete |
+| M3 | The Processing Pipeline (Zeek & Filebeat) | ✅ Complete |
+| M4 | Data Visualization (ELK Integration) | ✅ Complete |
+| M5 | Threat Intelligence Integration | 🔄 In Progress |
+| M6 | Proactive Kibana Alerting | 🔄 In Progress |
+| M7 | Custom Home Network Dashboards | 🔄 In Progress |
+| M8 | Live Anomaly Simulation & SOC Response Testing | 🔄 In Progress |
 
 ## Overview
 **Suburban-SOC:** Mesh-based wireless network for suburban neighborhoods with centralized SOC management. Replaces insecure home networks with a unified system that captures and analyzes traffic for threats, delivering enterprise-grade security and simple, plug-and-play connectivity for homeowners.
@@ -121,6 +155,8 @@ Before you begin, ensure you have the following:
 
 ## Contribution Guidelines
 Please see our Wiki for detailed procedures on contributing to this project. We follow Agile methodologies including sprint tracking and GitHub Issue Management.
+
+**Commit Approach:** This team uses **Delegated Commits**. All commits are routed through the designated Project Lead before being merged to the main branch. See our [Wiki: Commit-Approach](../../wiki/Commit-Approach) page for full details.
 
 ## Testing & Validation
 ### 1. Automated Testing:
